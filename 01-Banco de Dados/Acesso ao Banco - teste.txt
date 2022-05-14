@@ -1,0 +1,11 @@
+https://app.planetscale.com
+
+database: teste
+username: bxfygafj9nu6
+host: qp0oweyk7lhi.aws-sa-east-1-1.psdb.cloud
+password: pscale_pw_lV-oc8JCfcOMsbYULB6MPMy7VzVwxdMg3wDIFfqvqNY
+
+enable SSL
+
+
+
