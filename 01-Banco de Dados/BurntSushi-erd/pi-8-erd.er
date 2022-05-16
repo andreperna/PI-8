@@ -1,46 +1,46 @@
-[estados]
+[estado]
 *id
 nome
 uf
 cod_ibge
 
-[cidades]
+[cidade]
 *id
 nome
 cod_ibge
-+estados_id
++estado_id
 
-[ceps]
+[cep]
 *id
 cep
-+cidades_id
-+bairros_id
-+ruas_id
++cidade_id
++bairro_id
++rua_id
 
-[bairros]
+[bairro]
 *id
 nome
 
-[ruas]
+[rua]
 *id
 nome
 
-[pessoas]
+[pessoa]
 *id
 cpf
 data_nascimento
-+ceps_id
-numero
++cep_id
+end_numero
 
-[ocorrencias]
+[ocorrencia]
 *id
-+pessoas_id
++pessoa_id
 data_ocorrencia
 
-cidades *--1 estados
+cidade *--1 estado
 
-ceps *--1 cidades
-ceps *--1 bairros
-ceps *--1 ruas
-pessoas *--1 ceps
-ocorrencias *--1 pessoas
+cep *--1 cidade
+cep *--1 bairro
+cep *--1 rua
+pessoa *--1 cep
+ocorrencia *--1 pessoa
