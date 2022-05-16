@@ -1,6 +1,6 @@
 # Banco de Dados
 
-Essa parte do trabalho consite em preparar um banco de dados para o apicativo web.
+Essa parte do trabalho consiste em preparar um banco de dados para o aplicativo web.
 
 ## Checklist:
 
@@ -30,7 +30,7 @@ Essa parte do trabalho consite em preparar um banco de dados para o apicativo we
 
 ## 1. Escolher o tipo de banco de dados (SGBD)
 
-Essa ecolha tem como referência os bancos de dados do tipo **SQL** (relacionais) e **NoSQL** (não relacionais).
+Essa escolha tem como referência os bancos de dados do tipo **SQL** (relacionais) e **NoSQL** (não relacionais).
 
 Ambos os tipos possuem suas vantagens e desvantagens.
 
@@ -54,7 +54,7 @@ Alguns pontos que serviram de premissa para a escolha do banco de dados, foram:
 
 - [x] Ser multiplataforma
 
-- [x] Possuir uma boa docuemntação e material de consulta na web
+- [x] Possuir uma boa documentação e material de consulta na web
 
 Foram encontradas algumas opções que atendessem essas necessidades, onde podemos destacar o MySQL, MariaDB e PostegreSQL .
 
@@ -122,6 +122,8 @@ Segue abaixo uma relação de opções on-line, e preferencialmente gratuitas, p
 - [dbdiagram.io](https://dbdiagram.io/home)
 
 - [dynobird](https://dynobird.com/) - sucessor do projeto https://dbdesigner.id/
+
+- [BurntSushi/erd](https://github.com/BurntSushi/erd) - ferramenta open-source para desenhar diagramas erd
 
 ---
 
@@ -210,7 +212,7 @@ Fonte: https://www.luis.blog.br/modelagem-de-dados-modelo-conceitual-modelo-logi
 
 ### - Modelo **Físico**
 
-Nesta etapa leva-se em consideração as caracteristicas do SGBD escolhido.
+Nesta etapa leva-se em consideração as características do SGBD escolhido.
 
 Então tendo como base o modelo lógico, realizamos as adaptações nos nomes das tabelas e colunas, se necessário.
 
@@ -246,7 +248,13 @@ Segue o modelo conceitual, realizado com o auxilio da ferramenta [ERDPlus](https
 
 ### 6.2.Criar modelo **Lógico**
 
-Segue o modelo lógico, realizado com o auxílio da ferramenta [DynoBird](https://app.dynobird.com)
+Outra opção de modelo lógico, realizado com o auxílio da ferramenta [BurntSushi/erd](https://github.com/BurntSushi/erd)
+
+![](img/02_modelo_logico-erdplus.png)
+
+Segue o modelo lógico, realizado com o auxílio da ferramenta [ERDPlus](https://erdplus.com/)
+
+![](img/02_modelo_logico-erd.png)
 
 ---
 
