@@ -244,6 +244,7 @@ Fonte: http://spaceprogrammer.com/bd/introducao-ao-modelo-de-dados-e-seus-niveis
 Segue o modelo conceitual, realizado com o auxilio da ferramenta [ERDPlus](https://erdplus.com/)
 
 ![](img/01_modelo_conceitual.png)
+
 ---
 
 ### 6.2.Criar modelo **Lógico**
@@ -266,6 +267,7 @@ Segue o modelo físico, de forma gráfica, realizada com o auxílio da ferrament
 
 Outra opção de modelo físico, seria representá-lo na forma de instruções SQL para implantação do banco de dados em questão.
 Essa opção será apresentada a seguir.
+
 ---
 
 ### 7.Gerar e Carregar o script SQL (DDL) para criação das tabelas e relacionamentos.
