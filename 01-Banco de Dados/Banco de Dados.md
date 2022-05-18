@@ -272,8 +272,7 @@ Essa opção será apresentada a seguir.
 
 ### 7.Gerar e Carregar o script SQL (DDL) para criação das tabelas e relacionamentos.
 
-```SQL
-
+```sql
 -- -----------------------------------------------------
 -- Schema mydb
 -- -----------------------------------------------------
@@ -404,8 +403,6 @@ CREATE TABLE IF NOT EXISTS `mydb`.`ocorrencia` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
-
-
 ```
 
 ---
