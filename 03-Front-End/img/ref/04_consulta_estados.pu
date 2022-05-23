@@ -1,0 +1,37 @@
+@startsalt
+
+<style>
+saltDiagram {
+  BackgroundColor #EEEBDC
+}
+</style>
+
+title OCORRÊNCIAS - ESTADOS
+
+{+
+  .
+  = <&chevron-left> VISUALIZAR OCORRÊNCIAS <&chevron-right>
+  = <&account-login> ESTADOS
+  .
+  ..
+  == <U+2800> Total de Registros: XXXXX
+  ..
+  .
+  .
+  === <U+2800> Resumo por Estado:
+  {
+    <U+2800>|
+    {#
+      <U+2800><U+2800><U+2800>Estado<U+2800><U+2800><U+2800><U+2800><U+2800><U+2800>|<U+2800><U+2800>UF<U+2800><U+2800>|<U+2800><U+2800>Casos<U+2800><U+2800>
+      <U+2800>Acre|<U+2800><U+2800>AC|<U+2800><U+2800>XXXX     
+      <U+2800>XXXX|<U+2800><U+2800>XX|<U+2800><U+2800>XXXX  
+      <U+2800>XXXX|<U+2800><U+2800>XX|<U+2800><U+2800>XXXX  
+      <U+2800>XXXX|<U+2800><U+2800>XX|<U+2800><U+2800>XXXX  
+      <U+2800>XXXX|<U+2800><U+2800>XX|<U+2800><U+2800>XXXX
+      <U+2800>........|<U+2800>....|<U+2800><U+2800>.... 
+    }
+  }
+  .
+  .
+}
+@endsalt

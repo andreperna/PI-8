@@ -1,0 +1,30 @@
+pythonanywhere
+
+HOST=andreperna.mysql.pythonanywhere-services.com
+USERNAME=andreperna
+PASSWORD=pipmh57lhjue
+DATABASE=andreperna$mydb
+
+
+
+Como conectar no MySQl Workbench
+
+Connection Method:	Standart TCP/IP over SSH
+
+SSH Hostname:		ssh.pythonanywhere.com
+SSH Username:		andreperna
+SSH Password:		P@ssw0rd!
+SSH Key file:		
+MySQL Hostname:		andreperna.mysql.pythonanywhere-services.com
+MySQL Server Port:	3306
+Username:		andreperna
+Password:		pipmh57lhjue
+Default Schema:		andreperna$mydb
+
+em Remote Management
+habilitar SSH login based management
+
+
+
+
+

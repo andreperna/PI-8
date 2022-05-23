@@ -1,0 +1,11 @@
+https://app.planetscale.com
+
+HOST=bekm2zaxhir1.aws-sa-east-1-1.psdb.cloud
+USERNAME=pipmh57lhjue
+PASSWORD=pscale_pw_z-75WVvE74I-IuL_OJDLIAvZxl90T6YFOhwFppom5r8
+DATABASE=mydb
+
+enable SSL
+
+
+

@@ -1,0 +1,34 @@
+@startsalt
+
+<style>
+saltDiagram {
+  BackgroundColor #EEEBDC
+}
+</style>
+
+title VISUALIZAR OCORRÊNCIAS
+
+{+
+  .
+  = <&chevron-left> VISUALIZAR OCORRÊNCIAS <&chevron-right>
+  .
+  ..
+  ==== <U+2800> Página criada com a finalidade
+  ==== <U+2800> de consultar ocorrências de Dengue.
+  ..
+  .
+  .
+  === <U+2800> Escolha o tipo de consulta:
+  .
+  .
+  [===   Consulta por ESTADOS       ]
+  .
+  [===   Consulta por CIDADES       ]
+  .
+  [===   Consulta por BAIRROS       ]
+  .  
+  [===   Consulta por RUAS          ]
+  .
+  .
+}
+@endsalt

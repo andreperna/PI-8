@@ -1,0 +1,259 @@
+@startuml
+'!theme black-knight
+
+(*) -->"{{
+salt
+
+{+
+  .
+  = <&chevron-left> CONTROLE DA DENGUE <&chevron-right>
+  .
+  ..
+  ==== <U+2800> Página criada com a finalidade
+  ==== <U+2800> de registro e consulta de casos
+  ==== <U+2800> de Dengue na população.
+  ..
+  .
+  .
+  === <U+2800> Escolha o que deseja fazer:
+  .
+  [=== Registrar uma Ocorrência ]
+  .
+  [===   Visualizar Ocorrências ]
+  .
+  .
+}
+
+}}" as pagina_inicial
+
+if "Escolha Inicial" then
+   --> [Registrar Ocorrência] "{{
+salt
+
+{+
+  .
+  = <&chevron-left> REGISTRE SUA OCORRÊNCIA <&chevron-right>
+  .
+  ..
+  ==== <U+2800> Página criada com a finalidade
+  ==== <U+2800> de registro de ocorrências de Dengue.
+  ..
+  .
+  .
+  === <U+2800> Insira os dados da ocorrência:
+  .
+  {
+    <U+2800> CPF: | "000.000.000-00"
+    .
+    <U+2800> Cep: | "00.000-000    " | [Buscar Cep]
+    .
+    <U+2800> Número: | "0000          "
+    .
+    <U+2800> Data Nasc: | "00/00/0000    "
+    .
+    <U+2800> Ocorrência: | "00/00/0000    "
+
+    .
+  }
+  .
+  [===   Enviar Ocorrência             ]
+  .
+  [===   CANCELAR                      ]
+  .
+}
+
+}}"
+
+else
+   --> [Visualizar Ocorrências] "{{
+salt
+
+{+
+  .
+  .
+  = <&chevron-left> VISUALIZAR OCORRÊNCIAS <&chevron-right>
+  .
+  ..
+  ==== <U+2800> Página criada com a finalidade
+  ==== <U+2800> de consultar ocorrências de Dengue.
+  ..
+  .
+  .
+  === <U+2800> Escolha o tipo de consulta:
+  .
+  .
+  [===   Consulta por ESTADOS       ]
+  .
+  .
+  [===   Consulta por CIDADES       ]
+  .
+  .
+  [===   Consulta por BAIRROS       ]
+  .
+  .  
+  [===   Consulta por RUAS          ]
+  .
+  .
+  .
+  .
+}
+
+}}"
+
+if "Escolher tipo de Consulta" then
+--> [Estados] "{{
+salt
+{+
+  .
+  = <&chevron-left> VISUALIZAR OCORRÊNCIAS <&chevron-right>
+  = <&account-login> ESTADOS
+.
+  .
+  ..
+  == <U+2800> Total de Registros: XXXXX
+  ..
+  .
+  .
+.
+  === <U+2800> Resumo por Estado:
+  {
+    <U+2800>|
+    {#
+      <U+2800><U+2800><U+2800>Estado<U+2800><U+2800><U+2800><U+2800><U+2800><U+2800>|<U+2800><U+2800>UF<U+2800><U+2800>|<U+2800><U+2800>Casos<U+2800><U+2800>
+      <U+2800>Acre|<U+2800><U+2800>AC|<U+2800><U+2800>XXXX     
+      <U+2800>XXXX|<U+2800><U+2800>XX|<U+2800><U+2800>XXXX  
+      <U+2800>XXXX|<U+2800><U+2800>XX|<U+2800><U+2800>XXXX  
+      <U+2800>XXXX|<U+2800><U+2800>XX|<U+2800><U+2800>XXXX  
+      <U+2800>XXXX|<U+2800><U+2800>XX|<U+2800><U+2800>XXXX
+      <U+2800>........|<U+2800>....|<U+2800><U+2800>.... 
+    }
+  }
+  .
+  .
+.
+.
+}
+
+}}"
+
+else
+--> [Cidades] "{{
+salt
+{+
+  .
+  = <&chevron-left> VISUALIZAR OCORRÊNCIAS <&chevron-right>
+  = <&account-login> CIDADES
+  .
+  ..
+  .
+  {
+    <U+2800>|
+    ^Selecione um Estado          ^
+  }
+  .
+  ..
+  == <U+2800> Total no Estado: XXXXX
+  ..
+  .
+  === <U+2800> Resumo por Cidade:
+  {
+    <U+2800>|
+    {#
+      <U+2800><U+2800><U+2800>Cidade<U+2800><U+2800><U+2800>|<U+2800>Cód. IBGE<U+2800>|<U+2800><U+2800>Casos<U+2800><U+2800>
+      <U+2800>Adamantina|<U+0020>350010505|<U+2800><U+2800><U+0020>XXXX     
+      <U+2800>XXXX|<U+2800><U+2800>XXXXX|<U+2800><U+2800><U+0020>XXXX  
+      <U+2800>XXXX|<U+2800><U+2800>XXXXX|<U+2800><U+2800><U+0020>XXXX  
+      <U+2800>XXXX|<U+2800><U+2800>XXXXX|<U+2800><U+2800><U+0020>XXXX  
+      <U+2800>XXXX|<U+2800><U+2800>XXXXX|<U+2800><U+2800><U+0020>XXXX
+      <U+2800>........|<U+2800>....|<U+2800><U+2800>.... 
+    }
+  }
+  .
+  .
+.
+}
+}}"
+
+else
+--> [Bairros] "{{
+salt
+{+
+  .
+  = <&chevron-left> VISUALIZAR OCORRÊNCIAS <&chevron-right>
+  = <&account-login> BAIRROS
+  .
+  ..
+  .
+  {
+    <U+2800>|
+    ^Selecione um Estado          ^
+    .
+    <U+2800>|
+    ^Selecione uma Cidade         ^
+  }
+  .
+  ..
+  == <U+2800> Total na Cidade: XXXXX
+  ..
+  .
+  === <U+2800> Resumo por Bairro:
+  {
+    <U+2800>|
+    {#
+      <U+2800><U+2800><U+2800><U+2800><U+2800><U+2800><U+2800>Bairro<U+2800><U+2800><U+2800><U+2800><U+2800><U+2800>|<U+2800><U+2800><U+2800>Casos<U+2800><U+2800><U+2800>
+      <U+2800>Bairro 01...|<U+2800><U+2800><U+2800><U+0020>XXXX
+      <U+2800>Bairro 02...|<U+2800><U+2800><U+2800><U+0020>XXXX
+      <U+2800>Bairro 03...|<U+2800><U+2800><U+2800><U+0020>XXXX
+      <U+2800>Bairro 04...|<U+2800><U+2800><U+2800><U+0020>XXXX
+      <U+2800>........|<U+2800><U+2800>.... 
+    }
+  }
+  .
+  .
+}
+}}"
+
+else
+--> [Ruas] "{{
+salt
+{+
+  .
+  = <&chevron-left> VISUALIZAR OCORRÊNCIAS <&chevron-right>
+  = <&account-login> RUAS
+  .
+  ..
+  .
+  {
+    <U+2800>|
+    ^Selecione um Estado          ^
+    .
+    <U+2800>|
+    ^Selecione uma Cidade         ^
+  }
+  .
+  ..
+  == <U+2800> Total na Cidade: XXXXX
+  ..
+  .
+  === <U+2800> Resumo por Bairro:
+  {
+    <U+2800>|
+    {#
+      <U+2800><U+2800><U+2800><U+2800><U+2800><U+2800><U+2800>Bairro<U+2800><U+2800><U+2800><U+2800><U+2800><U+2800>|<U+2800><U+2800><U+2800>Casos<U+2800><U+2800><U+2800>
+      <U+2800><U+2800>Rua 01...|<U+2800><U+2800><U+2800><U+0020>XXXX
+      <U+2800><U+2800>Rua 02...|<U+2800><U+2800><U+2800><U+0020>XXXX
+      <U+2800><U+2800>Rua 01...|<U+2800><U+2800><U+2800><U+0020>XXXX
+      <U+2800><U+2800>Rua 02...|<U+2800><U+2800><U+2800><U+0020>XXXX
+      <U+2800><U+2800>........|<U+2800><U+2800><U+2800>.... 
+    }
+  }
+  .
+  .
+}
+}}"
+
+endif
+
+
+@enduml
+

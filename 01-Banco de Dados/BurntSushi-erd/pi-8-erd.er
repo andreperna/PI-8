@@ -2,12 +2,10 @@
 *id
 nome
 uf
-cod_ibge
 
 [cidade]
 *id
 nome
-cod_ibge
 +estado_id
 
 [cep]
