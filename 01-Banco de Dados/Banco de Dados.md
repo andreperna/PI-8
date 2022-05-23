@@ -25,6 +25,10 @@ Essa parte do trabalho consiste em preparar um banco de dados para o aplicativo 
 - [x] 7.Gerar e Carregar o script SQL (DDL) para criação das tabelas e relacionamentos.
 
 - [ ] 8.Inserir dados (cidades e estados) nas tabelas
+  
+  - [x] 8.1.Criar tabela estados.csv e importar para o banco de dados
+  
+  - [x] 8.2.Criar tabela cidades.csv e importar para o banco de dados
 
 ---
 
@@ -404,6 +408,98 @@ CREATE TABLE IF NOT EXISTS `mydb`.`ocorrencia` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 ```
+
+---
+
+# 8.Inserir dados (cidades e estados) nas tabelas
+
+Nessa etapa criamos as tabelas em arquivo csv para importar para o banco de dados
+Esses arquivos podem ser encontrados [aqui](./dados iniciais/).
+
+## 8.1.Criar tabela estados.csv e importar para o banco de dados
+
+A tabela estados possui o seguinte formato:
+
+| id  | nome     | uf  |
+|:---:|:-------- |:---:|
+| 11  | Rondônia | RO  |
+| 12  | Acre     | AC  |
+| 13  | Amazonas | AM  |
+| 14  | Roraima  | RR  |
+| ... | ...      | ... |
+
+Para construir essa tabela, utilizou-se como referência a [api de localidades do IBGE](https://servicodados.ibge.gov.br/api/v1/localidades/estados)
+Essa api retorna um arquivo json, con o seguinte formato:
+
+```json
+[
+    {
+        "id": 11,
+        "sigla": "RO",
+        "nome": "Rondônia",
+        "regiao": {
+                    "id": 1,
+                    "sigla": "N",
+                    "nome": "Norte"
+        }
+    },
+    {
+        "id": 12,
+        "sigla": "AC",
+        "nome": "Acre",
+        "regiao": {
+                    "id": 1,
+                    "sigla": "N",
+                    "nome": "Norte"
+        }
+    },
+    {
+    "id": 13,
+    "sigla": "AM",
+    "nome": "Amazonas",
+    "regiao": {
+                "id": 1,
+                "sigla": "N",
+                "nome": "Norte"
+    }
+    },
+.
+.
+.
+]
+```
+
+## 8.2.Criar tabela cidades.csv e importar para o banco de dados
+
+A tabela cidades possui o seguinte formato:
+
+| id      | nome                    | uf  |
+|:-------:| ----------------------- |:---:|
+| 1100015 | Alta Floresta D'Oeste   | 11  |
+| 1100379 | Alto Alegre dos Parecis | 11  |
+| 1100403 | Alto Paraíso            | 11  |
+| 1100346 | Alvorada D'Oeste        | 11  |
+| ...     | ...                     | ... |
+
+
+
+Para construir essa tabela, utilizou-se como referência a tabela de códigos dos munícipios do IBGE, disponivel no link abaixo:
+
+ [https://www.ibge.gov.br/explica/codigos-dos-municipios.php](https://www.ibge.gov.br/explica/codigos-dos-municipios.php)
+
+
+
+Esse download consiste num arquivo zip, contendo 3 tabelas, disponibilizadas nos formatos **.ods** (OpenDocument) e **.xls** (Excel):
+
+- RELATORIO_DTB_BRASIL_DISTRITO (contendo a lista de distritos)
+
+- RELATORIO_DTB_BRASIL_MUNICIPIO (contendo a lista de municípios)
+
+- RELATORIO_DTB_BRASIL_SUBDISTRITO (contendo a lista de subdistritos)
+
+
+
+Realizamos a extração dos dados do arquivo ***RELATORIO_DTB_BRASIL_MUNICIPIO.xls***
 
 ---
 
