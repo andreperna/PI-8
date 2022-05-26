@@ -24,11 +24,17 @@ Essa parte do trabalho consiste em preparar um banco de dados para o aplicativo 
 
 - [x] 7.Gerar e Carregar o script SQL (DDL) para criação das tabelas e relacionamentos.
 
-- [ ] 8.Inserir dados (cidades e estados) nas tabelas
+- [x] 8.Inserir dados (cidades e estados) nas tabelas
   
   - [x] 8.1.Criar tabela estados.csv e importar para o banco de dados
   
   - [x] 8.2.Criar tabela cidades.csv e importar para o banco de dados
+
+- [ ] 9.Inserir dados de cadatros simulados
+  
+  - [ ] 9.1.Criar tabela pessoas.csv e importar para o banco de dados
+  
+  - [ ] 9.2.Criar tabela ocorrencias.csv e importar para o banco de dados
 
 ---
 
@@ -414,7 +420,7 @@ ENGINE = InnoDB;
 # 8.Inserir dados (cidades e estados) nas tabelas
 
 Nessa etapa criamos as tabelas em arquivo csv para importar para o banco de dados
-Esses arquivos podem ser encontrados [aqui](./dados iniciais/).
+Esses arquivos podem ser encontrados [aqui](dados_iniciais/).
 
 ## 8.1.Criar tabela estados.csv e importar para o banco de dados
 
@@ -481,13 +487,9 @@ A tabela cidades possui o seguinte formato:
 | 1100346 | Alvorada D'Oeste        | 11  |
 | ...     | ...                     | ... |
 
-
-
 Para construir essa tabela, utilizou-se como referência a tabela de códigos dos munícipios do IBGE, disponivel no link abaixo:
 
  [https://www.ibge.gov.br/explica/codigos-dos-municipios.php](https://www.ibge.gov.br/explica/codigos-dos-municipios.php)
-
-
 
 Esse download consiste num arquivo zip, contendo 3 tabelas, disponibilizadas nos formatos **.ods** (OpenDocument) e **.xls** (Excel):
 
@@ -497,9 +499,95 @@ Esse download consiste num arquivo zip, contendo 3 tabelas, disponibilizadas nos
 
 - RELATORIO_DTB_BRASIL_SUBDISTRITO (contendo a lista de subdistritos)
 
-
-
 Realizamos a extração dos dados do arquivo ***RELATORIO_DTB_BRASIL_MUNICIPIO.xls***
+
+---
+
+# 9.Inserir dados de cadatros simulados
+
+## 9.1.Criar tabela pessoas.csv e importar para o banco de dados
+
+Para criação destes dados simulados, será utilizada uma base de dados de ceps, do ano de 2018, disponivel no site [http://cep.la](http://cep.la/baixar).
+
+Segundo esse site, a base de dados possui o total de 732.763 ceps, obtidos um por um do [site oficial dos correios](http://www.buscacep.correios.com.br/sistemas/buscacep/BuscaCepEndereco.cfm), no ano de 2018, e possui os seguintes campos:
+
+- CEP
+
+- Estado
+
+- Cidade
+
+- Bairro
+
+- Logradouro
+
+Para criação da tabela de cadastro de pessoas, serão utilizados dados aleatórios, tendo os seguintes escopos:
+
+- **Global:** Cadastros dentre todos os disponíveis na base.
+
+- **Estado SP:** Cadastros apenas no estado de São Paulo
+
+- **Sertãozinho:** Cadastros apenas na cidade de Sertãozinho
+
+- **Ribeirão Preto:** Cadastros apenas na cidade de Ribeirão Preto
+
+- **Americana:** Cadastros apenas na cidade de Americana
+
+- **Americana-Bom Jesus:** Cadastros nas seguintes ruas do bairro Bom Jesus, na cidade de Americana:
+  
+  - Rua Italianos
+  - Rua Castro Alves
+  - Rua Oswaldo Cruz
+  - Rua Marconi
+  - Rua Carolina Augusta
+
+- **Americana-Jardim Esperança:** Cadastros nas seguintes ruas do bairro Jardim Esperança, na cidade de Americana:
+  
+  - Rua Odpheu Ghirardello
+  - Rua Sebastião Boava
+  - Rua Maria Mafei de Souza Campos
+  - Rua Maestro Rubens Parada
+  - Rua José Benedito Carneiro
+
+- **Americana-Jardim São João:** Cadastros nas seguintes ruas do bairro Jardim São João, na cidade de Americana:
+  
+  - Rua Catanduva
+  - Rua Bauru
+  - Rua Piracicaba
+  - Rua Araraquara
+  - Rua Ribeirão preto
+
+- **Americana-Jardim Buzolin:** Cadastros nas seguintes ruas do bairro Jardim Buzolin, na cidade de Americana:
+  
+  - Rua Moacyr Mathiensen
+  - Rua Achiles Bovo
+  - Rua Manoel Buzolin
+  - Rua João Private
+  - Rua Paulo Butafa
+
+A quantidade de cadastros será conforme a tabela abaixo:
+
+| Escopo                     | Cadastros Simulados |
+|:-------------------------- |:-------------------:|
+| Global                     | 50000               |
+| Estado SP                  | 10000               |
+| Sertãozinho                | 250                 |
+| Ribeirão Preto             | 1000                |
+| Americana                  | 500                 |
+| Americana-Bom Jesus        | 50                  |
+| Americana-Jardim Esperança | 50                  |
+| Americana-Jardim São João  | 50                  |
+| Americana-Jardim Buzolin   | 50                  |
+
+Totalizando **61.950** cadastros
+
+Segue abaixo uma imagem representando essa distribuição:
+
+![](img/treemap.png)
+
+## 9.2.Criar tabela ocorrencias.csv e importar para o banco de dados
+
+
 
 ---
 
