@@ -533,39 +533,38 @@ Para criação da tabela de cadastro de pessoas, serão utilizados dados aleató
 
 - **Americana:** Cadastros apenas na cidade de Americana
 
-- **Americana-Bom Jesus:** Cadastros nas seguintes ruas do bairro Bom Jesus, na cidade de Americana:
-  
-  - Rua Italianos
-  - Rua Castro Alves
-  - Rua Oswaldo Cruz
-  - Rua Marconi
-  - Rua Carolina Augusta
+- **04 bairros de Americana:** Foram selecionados os 4 bairros que posuem o maior número de ruas:
 
-- **Americana-Jardim Esperança:** Cadastros nas seguintes ruas do bairro Jardim Esperança, na cidade de Americana:
-  
-  - Rua Odpheu Ghirardello
-  - Rua Sebastião Boava
-  - Rua Maria Mafei de Souza Campos
-  - Rua Maestro Rubens Parada
-  - Rua José Benedito Carneiro
+  - **Americana-Vila Dainese:** Cadastros nas seguintes ruas do bairro Vila Dainese, na cidade de Americana:
+    - Rua Francisco Giongo
+    - Rua Jaguarão
+    - Rua Francisco Corat
+    - Avenida Marginal Três
+    - Rua Miranda
 
-- **Americana-Jardim São João:** Cadastros nas seguintes ruas do bairro Jardim São João, na cidade de Americana:
-  
-  - Rua Catanduva
-  - Rua Bauru
-  - Rua Piracicaba
-  - Rua Araraquara
-  - Rua Ribeirão preto
+  - **Americana-Cidade Jardim II:** Cadastros nas seguintes ruas do bairro Cidade Jardim II, na cidade de Americana:
+    - Travessa Copo de Leite
+    - Travessa Flor do Campo
+    - Rua das Alfazemas
+    - Rua Dois
+    - Rua das Magnólias
 
-- **Americana-Jardim Buzolin:** Cadastros nas seguintes ruas do bairro Jardim Buzolin, na cidade de Americana:
-  
-  - Rua Moacyr Mathiensen
-  - Rua Achiles Bovo
-  - Rua Manoel Buzolin
-  - Rua João Private
-  - Rua Paulo Butafa
+  - **Americana-Centro:** Cadastros nas seguintes ruas do bairro Centro, na cidade de Americana:
+    - Rua Carioba
+    - Rua Capitão Corrêa Pacheco
+    - Rua Heitor Penteado
+    - Rua Joaquim Luiz de Mattos
+    - Rua Doutor Vieira Bueno
+
+  - **Americana-Parque Novo Mundo:** Cadastros nas seguintes ruas do bairro Parque Novo Mundo, na cidade de Americana:
+    - Praça Manoel Rodrigues Nogueira
+    - Rua Valinhos
+    - Rua das Açucenas
+    - Rua Lindóia
+    - Rua Jundia
 
 A quantidade de cadastros será conforme a tabela abaixo:
+
 
 | Escopo                     | Cadastros Simulados |
 |:-------------------------- |:-------------------:|
@@ -574,10 +573,10 @@ A quantidade de cadastros será conforme a tabela abaixo:
 | Sertãozinho                | 250                 |
 | Ribeirão Preto             | 1000                |
 | Americana                  | 500                 |
-| Americana-Bom Jesus        | 50                  |
-| Americana-Jardim Esperança | 50                  |
-| Americana-Jardim São João  | 50                  |
-| Americana-Jardim Buzolin   | 50                  |
+| Americana-Vila Dainese     | 50                  |
+| Americana-Cidade Jardim II | 50                  |
+| Americana-Centro           | 50                  |
+| Americana-Parque Novo Mundo| 50                  |
 
 Totalizando **61.950** cadastros
 

@@ -1,12 +1,12 @@
 https://tidbcloud.com/
 
-HOST=tidb.60ecefda.c72edad0.us-east-1.prod.aws.tidbcloud.com
+HOST=tidb.c458433.c72edad0.us-east-1.prod.aws.tidbcloud.com
 USERNAME=root
 PASSWORD=P@ssw0rd!
 DATABASE=test
 PORT=4000
 
-mysql --connect-timeout 15 -u root -h tidb.60ecefda.c72edad0.us-east-1.prod.aws.tidbcloud.com -P 4000 -p P@ssw0rd!
+mysql --connect-timeout 15 -u root -h tidb.c458433.c72edad0.us-east-1.prod.aws.tidbcloud.com -P 4000 -p P@ssw0rd!
 
 
 
