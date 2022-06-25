@@ -1,0 +1,1 @@
+SELECT estado, uf, COUNT(*) FROM view_ocorrencias GROUP BY estado, uf ORDER BY uf
